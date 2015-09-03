@@ -303,27 +303,35 @@ span{
 .productTitle{
 	width: 100%;
 	margin-bottom: 30px;
-	overflow: auto;
 }
 .productTitle h2{
-	display: inline;
-	float: left;
+	background: url("../images/background.jpg") repeat;
+	display: inline-block;
+	position: relative;
 }
 .separator{
 	background-image: url(../images/separator.png);
 	background-repeat: repeat-x;
-	background-position: center;
-	display: inline-block;
-	float: left;
-	width: 890px;
+	position: absolute;
+	margin-top: 5px;
+	width: 1132px;
 	height: 20px;
 }
-.featuredTitle{width: 855px;}
-.sponsorTitle{width: 920px;}
+.sponsorTitle{width: 1175px;}
 .productTitle a{
-	float: right;
-	margin-right: 0;
-	margin-left: 2px;
+	display: block;
+	position: absolute;
+	margin-top: -27px;
+	width: 22px;
+	height: 23px;
+}
+.productTitle .prevButton{
+	background-image: url(../images/left_button.png);
+	margin-left: 1135px;
+}
+.productTitle .nextButton{
+	background-image: url(../images/right_button.png);
+	margin-left: 1160px;
 }
 /*HoverEffect*/
 .productTitle a:hover{opacity: 0.8;}
