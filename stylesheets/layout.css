@@ -62,7 +62,6 @@ span{
 	width: 100%;
 	height: 220px;
 }
-
 .logo a,h1{
 	background-image: url(../images/logo.png);
 	background-repeat: no-repeat;
@@ -123,6 +122,7 @@ span{
 	border-radius: 5px;
 }
 .icon input[type=image]:hover{opacity: 0.5;}
+
 /*-----------Menu-----------*/
 .nav{
 	background-image: url(../images/separator.png), url(../images/separator.png);
@@ -153,17 +153,12 @@ span{
 .buyCartButton:hover{opacity: 0.8;}
 
 /*------------------------------
-			Content
+			SlideShow
 ------------------------------*/
-#content{
-	width: 100%;
-	height: 100%;
-}
 
 /*-----------SlideShow(JQuery)-----------*/
 #slideShow_warp{
 	background-image: url(../images/container_bg.jpg);
-	
 	overflow: visible;
 	position: relative;
 	width: 100%;
@@ -191,25 +186,6 @@ span{
 	height: 420px;
 }
 
-
-/*
-.slideShow{
-	position: relative;
-	margin: 0 auto;
-	overflow: ;
-	width: 1180px;
-	height: 420px;
-}
-.slideShow ul{
-	list-style-type: none;
-	position: absolute;
-	overflow: ;
-	width: 9999px;
-}
-.slideShow li{
-	float: left;
-	width: 1180px;
-}*/
 
 /*-----slideShow前、後按鈕-----*/
 #slideShow_warp span.prev{
@@ -243,7 +219,7 @@ span{
 .prev:hover, .next:hover{opacity: 1;}
 
 /*-----slideShow上的文字-----*/
-.opacityBG{
+.opacityBG{		/*透明背景*/
 	background-color: #000;
 	opacity: 0.5;
 	position: absolute;
@@ -253,14 +229,13 @@ span{
 	height: 250px;
 	z-index: 10;
 }
-.slideShowText{
+.slideShowText{	/*文字敘述*/
 	position: absolute;
 	top: 40px;
 	left: 48px;
 	visibility: ;
 	z-index: 10;
 }
-
 .slideShowTitle, .slideShowDescription{
 	color: #ebebeb;
 	margin-bottom: 20px;
@@ -275,6 +250,14 @@ span{
 	color: #95b924;
 	display: inline;
 	font-size: 18px;
+}
+
+/*------------------------------
+			Content
+------------------------------*/
+#content{
+	width: 100%;
+	height: 100%;
 }
 /*-----slideShow下方引用-----*/
 .quote{
@@ -304,12 +287,12 @@ span{
 	width: 100%;
 	margin-bottom: 30px;
 }
-.productTitle h2{
+.productTitle h2{	/*標題*/
 	background: url("../images/background.jpg") repeat;
 	display: inline-block;
 	position: relative;
 }
-.separator{
+.separator{			/*分隔線*/
 	background-image: url(../images/separator.png);
 	background-repeat: repeat-x;
 	position: absolute;
@@ -325,11 +308,11 @@ span{
 	width: 22px;
 	height: 23px;
 }
-.productTitle .prevButton{
+.productTitle .prevButton{		/*小按鈕*/
 	background-image: url(../images/left_button.png);
 	margin-left: 1135px;
 }
-.productTitle .nextButton{
+.productTitle .nextButton{		/*小按鈕*/
 	background-image: url(../images/right_button.png);
 	margin-left: 1160px;
 }
@@ -361,7 +344,7 @@ span{
 	margin-bottom: 20px;
 	position: relative;
 }
-.onSale{
+.onSale{/*On Sale圖片*/
 	position: absolute;
 	top: 10px;
 	left: 10px;
@@ -384,13 +367,13 @@ span{
 	float: right;
 	margin-right: 15px;
 }
-.recentProducts li>h3,.featuredProducts li>h3{
+.recentProducts li>h3,.featuredProducts li>h3{ /*商品標題*/
 	float: left;
 	font-weight: normal;
 	margin-bottom: 10px;
 	padding-left: 15px;
 }
-.recentProducts li>p,.featuredProducts li>p{
+.recentProducts li>p,.featuredProducts li>p{/*商品敘述*/
 	color: #9b9b9b;
 	border-bottom: 2px solid #e7e7e7;
 	float: left;
@@ -398,7 +381,7 @@ span{
 	margin-bottom: 15px;
 	padding: 0 15px 10px 15px;
 }
-.viewTheProduct{
+.viewTheProduct{ /*連結*/
 	color: #95b924;
 	float: left;
 	display: block;
@@ -439,7 +422,7 @@ span{
 /*------------------------------
 			Footer
 ------------------------------*/
-#goTop{
+#goTop{	/*移至頂端按鈕*/
 	position: fixed;
 	right: 80px;
 	bottom: 0px;
@@ -559,12 +542,11 @@ img.logo{
 	width: 100%;
 }
 #bottombar div{
-
 	width: 1182px;
 	margin: 15px auto;
 	overflow: auto;
 }
-.bottomNav li{
+.bottomNav li{ /*左邊導覽*/
 	display: inline;
 	float: left;
 	margin-right: 20px;
