@@ -11,6 +11,7 @@ body{
 	background-repeat: repeat;
 	font-family: Sans-serif, Century Gothic, Arial;
 	font-size: 16px;
+	min-width: 1180px;
 }
 
 #header_warp,#content_warp{
@@ -30,10 +31,11 @@ span{
 	font-family: inherit;
 	color: #9b9b9b;
 	margin-bottom: 50px;
-	height: 30px;
+	width: 100%;
+	height: 40px;
 }
 #topbar div{
-	margin: 5px auto;
+	margin: 10px auto;
 	width: 1182px;
 	height: 30px;
 }
