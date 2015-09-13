@@ -11,12 +11,14 @@ body{
 	background-repeat: repeat;
 	font-family: PT-Sans2,Helvetica,Sans-serif, Century Gothic, Arial;
 	font-size: 16px;
+	line-height: 1;
 	min-width: 1182px;
 }
 
 #header_warp,#content_warp{
 	margin: 0px auto;
 	width: 1182px;
+	height: 100%;
 }
 @font-face{
 	font-family: PT-Sans;
@@ -38,26 +40,40 @@ a{text-decoration: none}
 	color: #797979;
 	margin-bottom: 46px;
 	width: 100%;
-	height: 28px;
+	height: 29px;
 }
 	#topbar .topbar_inner{
+		font-size: 14px;
 		margin: 0 auto;
-		padding-top: 4px;
 		width: 1182px;
-		height: 28px;
+		height: 100%;
 	}
 	.topbar_inner p{
 		display: inline;
 		float: left;
-		font-size: 14px;
 		margin-right: 49px;
+		line-height: normal;
+		padding-top: 4px;
 	}
 	.topbar_inner p a,select{
 		color: #98b827;
-		padding-left: 3px;
 	}
+	.selectStyle select{
+		-webkit-appearance: none;
+   		-moz-appearance: none;
+   		appearance: none;
+   		border: none;
+   		background: transparent;
+		width: 70px;
+	}
+	.selectStyle{
+		background: url(../images/pull_down.gif) no-repeat right center;
+		margin: 0;
+	}
+	select.currency{width: 55px;}
+	
 	/*右邊連結*/
-	.topbar_inner ul{float: right; font-size: 14px;}
+	.topbar_inner ul{float: right; padding-top: 5px;}
 	.topbar_inner li{ display: inline-block;}
 	.topbar_inner li>a, .topbar_inner li>span{
 		color: inherit; 
@@ -65,14 +81,15 @@ a{text-decoration: none}
 	}
 	/*HoverEffect*/
 	.topbar_inner a:hover{color: #98b827;}
-
+	.selectStyle select:hover{cursor: pointer;}
 /*------------------------------
 			Header
 ------------------------------*/
 #header{
-	margin-bottom: 60px;
 	width: 100%;
-	height: 220px;
+	height: 100%;
+	margin-bottom: 62px;
+	overflow: auto;
 }
 	.logo a,h1{
 		background-image: url(../images/logo.png);
@@ -181,7 +198,7 @@ a{text-decoration: none}
 	height: 86px;
 }
 	.nav ul{
-		margin-top: 29px;
+		margin-top: 30px;
 		width: 100%;
 		height: 21px;
 	}
@@ -219,12 +236,11 @@ a{text-decoration: none}
 		position: relative;
 		margin: 0 auto;
 		overflow: hidden;
-		width: 100%;
+		width: 1180px;
 		height: 420px;
 	}
 		.iosSlider{
-			margin: 0 auto;
-			width: 1180px;
+			width: 100%;
 			height: 420px;
 		}
 		.iosSlider .slider{
@@ -284,29 +300,29 @@ a{text-decoration: none}
 			z-index: 10;
 		}
 
-		.slideShowText{	/*文字敘述*/
+		.slideShowText{	/*SlideShow上的文字敘述*/
 			position: absolute;
 			top: 48px;
 			left: 50px;
 			z-index: 10;
 		}
-		.slideShowTitle{
+		.slideShowTitle{	/*SlideShow Title*/
 			color: #ebebeb;
-			font-size: 40px;
+			font-family: PT-Sans;
+			font-size: 48px;
 			margin-bottom: 25px;
 		}
-		.slideShowDescription{
+		.slideShowDescription{	/*SlideShow Description*/
 			color: #ebebeb;
-			font-size: 16px;
-			line-height: 26px;
+			line-height: 1.5;
 			margin-bottom: 20px;
 		}
-		.slideShowLink {
+		.slideShowLink {	/*Check the Product*/
 			color: #95b924;
-			font-weight: bold;
-			font-size: 18px;
+			font-weight: normal;
 		}
-
+/*HoverEffect*/
+	.slideShowLink:hover{text-decoration: underline;}
 /*------------------------------
 			Content
 ------------------------------*/
@@ -328,7 +344,7 @@ a{text-decoration: none}
 		color: #222224;
 		font-family: PT-Sans;
 		font-size: 44px;
-		padding: 10px 0 0 19px;
+		padding: 16px 0 0 19px;
 	}
 	.quote p>span{margin-left: 11px;}
 	.quote a{
@@ -351,6 +367,7 @@ a{text-decoration: none}
 	.productTitle h2{	/*標題*/
 		background: url("../images/background.jpg") repeat;
 		display: inline-block;
+		font-size: 24px;
 		position: relative;
 	}
 	.separator{			/*分隔線*/
@@ -373,14 +390,14 @@ a{text-decoration: none}
 		background-image: url(../images/left_button.png);
 		/*margin-left: 1135px;*/
 		position: absolute;
-		top: 28px;
+		top: 30px;
 		right: 24px;
 	}
 	.productTitle .nextButton{		/*小按鈕*/
 		background-image: url(../images/right_button.png);
 		/*margin-left: 1160px;*/
 		position: absolute;
-		top: 28px;
+		top: 30px;
 		right: 0;
 }
 /*HoverEffect*/
@@ -392,7 +409,6 @@ a{text-decoration: none}
 	width: 100%;
 	height: 430px;
 }
-
 	.recentProducts ul ,.featuredProducts ul{
 		list-style: none;
 		width: 100%;
@@ -403,6 +419,9 @@ a{text-decoration: none}
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
 		background-color: #fff;
+		background-image: url(../images/bottomBorder.png);
+		background-repeat: repeat-x;
+		background-position: bottom;
 		display: inline-block;
 		position: relative;
 		width: 278px;	
@@ -435,7 +454,7 @@ a{text-decoration: none}
 		}
 		.price{/*價格*/
 			font-weight: bold;
-			font-size: 20px;
+			font-size: 18px;
 			float: left;
 			margin: 0;
 			padding: 5px 0 20px 15px;
@@ -447,10 +466,10 @@ a{text-decoration: none}
 		.recentProducts li>h3,.featuredProducts li>h3{ /*商品標題*/
 			border-top: 1px solid #e7e7e7;
 			float: left;
+			font-size: 20px;
 			font-weight: normal;
-			line-height: 0;
 			margin-bottom: 0px;
-			padding: 21px 0 18px 15px;
+			padding: 21px 0 15px 15px;
 			width: 265px;
 		}
 		.recentProducts li>p,.featuredProducts li>p{/*商品敘述*/
@@ -458,15 +477,14 @@ a{text-decoration: none}
 			clear: both;
 			border-bottom: 1px solid #e7e7e7;
 			font-size: 14px;
-			line-height: 1.6em;
-			margin-bottom: 19px;
-			padding: 0 36px 21px 15px;
+			line-height: 1.5;
+			margin-bottom: 15px;
+			padding: 0 36px 18px 15px;
 		}
 		.viewTheProduct{ /*連結*/
 			color: #95b924;
 			float: left;
 			display: block;
-			margin-bottom: 20px;
 			padding-left: 15px;
 		}
 /*HoverEffect*/
@@ -526,8 +544,8 @@ a{text-decoration: none}
 	height: 290px;
 }
 	#footer h2{
+		font-size: 24px;
 		font-weight: normal;
-		line-height: 18px;
 	}
 	.footer{
 		margin: 0 auto;
@@ -552,7 +570,7 @@ a{text-decoration: none}
 				width: 240px;
 				height: 48px;
 			}
-			.column1 h2{line-height: ; margin-bottom: 19px;}
+			.column1 h2{margin-bottom: 19px;}
 			.column1 li{
 				display: inline-block;
 				margin-right: 5px;
@@ -584,15 +602,13 @@ a{text-decoration: none}
 				margin-right: 14px;
 				height: 70px;
 			}
-			.column2 li h4{
+			.column2 li h4{  /*Post Title*/
 				float: left;
-				line-height: 16px;
-				margin-bottom: 5px;
+				margin-bottom: 10px;
 				padding-top: 15px;
 			}
-			.column2 li p{
+			.column2 li p{	/*posted by*/
 				font-size: 14px;
-				line-height: 14px;
 				display: inline-block;
 			}
 			.column2 li>p a{color:#95b924;}
@@ -604,8 +620,8 @@ a{text-decoration: none}
 			.column3 h2{margin-bottom: 24px;}
 			.column3 li{margin-bottom: 32px;}
 			.column3  p{
-				line-height: 14px;
-				margin-bottom: 12px;
+				font-size: 14px;
+				margin-bottom: 10px;
 			}
 
 		/*Column4*/
@@ -617,9 +633,9 @@ a{text-decoration: none}
 			}
 				.commenter img{margin-bottom: 5px;}
 				.commenter{
-					font-weight: bold;
 					float: left;
-					line-height: 16px;
+					font-size: 14px;
+					font-weight: bold;
 					margin-right: 16px;
 					text-align: center;
 				}
@@ -630,11 +646,12 @@ a{text-decoration: none}
 					-webkit-border-radius: 10px;
 					background: #f6f4f4 url(../images/comment.png) no-repeat right bottom;
 					float: left;
+					font-size: 14px;
+					line-height: normal;
 					width: 235px;
 					height: 93px;
 				}
 				.comment p{
-					line-height: 20px;
 					padding:11px 0px 29px 13px;
 				}
 /*HoverEffect*/
@@ -658,18 +675,18 @@ a{text-decoration: none}
 	}
 	.bottomNav {
 		display: inline-block;
-		line-height: 12px;
 		padding: 8px 0;
 	}
 	.bottomNav li{ /*左邊導覽*/
 		float: left;
+		font-size: 11px;
 		list-style: none;
 		margin-right: 15px;
 	}
 	.bottomNav li>a{color: #9b9b9b;}
 	.copyRight{
 		float: right;
-		line-height: 12px;
+		font-size: 12px;
 		padding: 8px 0;
 	}
 /*HoverEffect*/

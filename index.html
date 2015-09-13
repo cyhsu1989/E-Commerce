@@ -21,55 +21,33 @@
 	<meta property="og:image" content="https://github.com/cyhsu9856/web_practice2/images/Other/slideShowSide.jpg">
 
 	<script type="text/javascript" src="script/jquery-2.1.4.js"></script>
-	<!--<script type="text/javascript" src="script/slideShow.js"></script>-->
+	<script type="text/javascript" src="script/jquery.retina.js"></script>
+	
 	<!--For SlideShow-->
 	<script type="text/javascript" src="iosslider/jquery.iosslider.js"></script>
-	<script type="text/javascript">	
-		$(document).ready(function(){  		
-    		$('.iosSlider').iosSlider({
-		        snapToChildren: true,
-		        scrollbar: true,
-		        scrollbarHide: false,
-		        desktopClickDrag: true,
-		        scrollbarLocation: 'bottom',
-		        scrollbarHeight: '6px',
-		        //scrollbarBackground: 'url(_img/some-img.png) repeat 0 0',
-		        scrollbarBorder: '1px solid #000',
-		        scrollbarMargin: '0 30px 16px 30px',
-		        scrollbarOpacity: '0.75',
-		        //onSlideChange: slideChange,
-		        autoSlide: true,
-		        autoSlideTimer: 5000,
-		        autoSlideTransTimer: 1000,
-		        autoSlideHoverPause: true,
-		        infiniteSlider: true,
-		        stageCSS: {
-		        	
-		        },
-		        navPrevSelector: $('.prev'),
-		        navNextSelector: $('.next')
-		    });
+	<script type="text/javascript" src="script/main.js"></script>
+	
 
-    	    //GoToTop
-    		$('#goTop').click(function(){
-				$('html,body').animate({scrollTop:$('#topbar').offset().top}, 1000);
-				return false;
-			})
-			//$('.slideShowText:hidden, .opacityBG:hidden').fadeIn(1000);
-		});
-	</script>
 </head>
 <body>
 	<!--TopBar-->
 	<div id="topbar">
 		<div class="topbar_inner">
 			<p>Language:
-			<span>
-			<select>
-				<option value="english">English</option>
-				<option value="chinese">Chinese</option>
-			</select></span></p>
-			<p>Currency:<span><select><option value="eur">EUR</option></select></span></p>
+			<span class="selectStyle">
+				<select>
+					<option value="english">English</option>
+					<option value="chinese">Chinese</option>
+				</select>
+			</span>
+			</p>
+			<p>Currency:
+			<span class="selectStyle">
+				<select class="currency">
+					<option value="eur">EUR</option>
+				</select>
+			</span>
+			</p>
 			<p>Telephone:<a href="#">+565 975 658</a></p>
 			<ul>
 				<li>
@@ -317,8 +295,8 @@
 							<p>Celovska cesta 135</p>
 							<p>Country Slovenia</p>
 						</li><li>
-							<p>Phone:(+386) 40 123 456</p>
-							<p>Mobile:(+386) 40 654 123</p>
+							<p>Phone: (+386) 40 123 456</p>
+							<p>Mobile: (+386) 40 654 123</p>
 						</li><li>
 							<p>info@premiumcoding.com</p>
 						</li>
