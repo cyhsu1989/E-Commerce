@@ -1,4 +1,17 @@
 $(document).ready(function(){
+	
+			$('.slideShowContainer').slick({
+				infinite: true,
+				autoplay: true,
+   				autoplaySpeed: 3000,
+   				centerMode: true,
+  				slidesToShow: 3,
+  				slidesToScroll: 1,
+  				variableWidth: true,
+  				prevArrow: '.prev',
+  				nextArrow: '.next'
+			})
+
 			//SlideShow for Recent Products
 			$('.recentSlide').slick({
    				infinite: true,
@@ -59,8 +72,17 @@ $(document).ready(function(){
 		    });
 
     	    //GoToTop
+    	    $("#goTop").hide();
+    	    $(window).scroll(function () {
+				if ($(this).scrollTop() > 100) {
+					$('#goTop').fadeIn();
+				} else {
+					$('#goTop').fadeOut();
+				}
+			})
+
     		$('#goTop').click(function(){
-				$('html,body').animate({scrollTop:$('#topbar').offset().top}, 800);
+				$('html,body').animate({scrollTop: 0}, 800);
 				return false;
 			})
 			//$('.slideShowText:hidden, .opacityBG:hidden').fadeIn(1000);
