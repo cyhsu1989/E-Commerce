@@ -2,12 +2,13 @@
 <html>
 <head>
 	<title>Camera Store</title>
+	<!--For CSS-->
 	<link rel="stylesheet" type="text/css" href="stylesheets/layout.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css">
 		
 	<link rel="shortcut icon" href="favicon.ico" />
 	<link rel="apple-touch-icon" sizes="60x60" href="touch-icon-iphone.png">
 	
-	<meta name="viewport" content="width=device-width; initial-scale=1.0;">
 	<meta name="description" content="This is Camera Store."/>
 	<meta name="keywords" content="camera, camera lens, camera store"/>
 	<meta name="robots" content="nofollow"/>
@@ -22,9 +23,10 @@
 
 	<script type="text/javascript" src="script/jquery-2.1.4.js"></script>
 	<script type="text/javascript" src="script/jquery.retina.js"></script>
-	
+	<script type="text/javascript" src="slick/slick.min.js"></script>
 	<!--For SlideShow-->
 	<script type="text/javascript" src="iosslider/jquery.iosslider.js"></script>
+	
 	<script type="text/javascript" src="script/main.js"></script>
 	
 
@@ -48,28 +50,20 @@
 				</select>
 			</span>
 			</p>
-			<p>Telephone:<a href="#">+565 975 658</a></p>
+			<p>Telephone:<a href="#"><span>+565 975 658</span></a></p>
 			<ul>
-				<li>
-					<a href="#">My<span>Acount</span></a>
-				</li><li>
-					<span>|</span>
-				</li><li>
-					<a href="#">Login</a>
-				</li><li>
-					<span>|</span>
-				</li><li>
-					<a href="#">Rigister</a>
-				</li><li>
-					<span>|</span>
-				</li><li>
-					<a href="#">Checkout</a>
-				</li>
+				<li><a href="#">My<span>Acount</span></a></li>
+				<li><span>|</span></li>
+				<li><a href="#">Login</a></li>
+				<li><span>|</span></li>
+				<li><a href="#">Rigister</a></li>
+				<li><span>|</span></li>
+				<li><a href="#">Checkout</a></li>
 			</ul>
 		</div>		
 	</div>
 	<!--Main-Content-->
-	<div id="header_warp">
+	<div id="header_wrap">
 		<div id="header">
 			<h1 class="logo">
 				<a href="">Camera Store</a>
@@ -78,35 +72,22 @@
 					<input type="search" placeholder="Search..."></input>
 					<input type="image" src="images/icon_search.png">
 					<ul>
-						<li>
-							<a target="_blank" class="rss" href="https://www.rss.com/"></a>
-						</li><li>
-							<a target="_blank" class="pinterest" href="https://www.pinterest.com/"></a>
-						</li><li>
-							<a target="_blank" class="facebook" href="https://www.facebook.com/"></a>
-						</li><li>
-							<a target="_blank" class="twitter" href="https://twitter.com/"></a>
-						</li><li>
-							<a target="_blank" class="dribble" href="https://dribbble.com/"></a>
-						</li>
+						<li><a target="_blank" class="rss" href="https://www.rss.com/"></a></li>
+						<li><a target="_blank" class="pinterest" href="https://www.pinterest.com/"></a></li>
+						<li><a target="_blank" class="facebook" href="https://www.facebook.com/"></a></li>
+						<li><a target="_blank" class="twitter" href="https://twitter.com/"></a></li>
+						<li><a target="_blank" class="dribble" href="https://dribbble.com/"></a></li>
 					</ul>
 			</div>
 				
 			<div class="nav">
 					<ul>
-						<li>
-							<a href="">HOME</a>
-						</li><li>
-							<a href="">APPAREL</a>
-						</li><li>
-							<a href="">FASHION</a>
-						</li><li>
-							<a href="">NEWS</a>
-						</li><li>
-							<a href="">PORTIFOLIO</a>
-						</li><li>
-							<a href="">CONTACT<span>US</span></a>
-						</li>
+						<li><a href="">HOME</a></li>
+						<li><a href="">APPAREL</a></li>
+						<li><a href="">FASHION</a></li>
+						<li><a href="">NEWS</a></li>
+						<li><a href="">PORTIFOLIO</a></li>
+						<li><a href="">CONTACT<span>US</span></a></li>
 					</ul>
 					<a href="" class="buyCartButton"><img src="images/shoopingCart_button.png"></a>
 			</div>
@@ -114,7 +95,7 @@
 	</div>	
 
 	<!--SlieShow-->
-	<div id="slideShow_warp">
+	<div id="slideShow_wrap">
 		<div class="iosSliderContainer">
 			<div class="iosSlider">
 				<div class="slider">
@@ -139,7 +120,7 @@
 		<span class="next">&gt;</span>	
 	</div>	
 
-	<div id="content_warp">	
+	<div id="content_wrap">	
 		<div id="content">			
 			<div class="quote">
 				<p>CHECK<span>OUR</span><span><b>AMAZING</b></span><span><b>OFFERS</b>,</span><span>VISIT</span><span>OUR</span><span><b>STORE</b></span><span>NOW</span></p>
@@ -149,12 +130,12 @@
 			<div class="productTitle">
 				<div class="separator"></div>
 				<h2>RECENT<span>PRODUCTS</span></h2>
-				<a href="" class="prevButton"></a>
-				<a href="" class="nextButton"></a>
+				<a href="" class="recentPrevButton"></a>
+				<a href="" class="recentNextButton"></a>
 			</div>
 			<!--ProductsContent-->
 			<div class="recentProducts">
-				<ul>
+				<ul class="recentSlide">
 					<li class="list">
 						<img class="onSale" src="images/sale_button.png">
 						<a href="" class="product"><img src="images/Other/product1.jpg"></a>
@@ -162,29 +143,66 @@
 						<a href="" class="addToCart"><img src="images/addToCart_button.png"></a>
 						<h3>EOS 450D Camera</h3>
 						<p>Lorem ipsum dolor sit amet, conse<br>adipiscing elit, sed diam nonu mmy<br>mod tincidunt ut lao dolore.</p>
-						<a href="" class="viewTheProduct">View the Product<img src="images/viewMore.png"></a>
-					</li><li class="list">
+						<a href="" class="viewTheProduct">View the Product</a>
+					</li>
+					<li class="list">
 						<a href="" class="product"><img src="images/Other/product2.jpg"></a>
 						<span class="price">$699.99</span>
 						<a href="" class="addToCart"><img src="images/addToCart_button.png"></a>
 						<h3>A Set of Camera Lenses</h3>
 						<p>Lorem ipsum dolor sit amet, conse<br>adipiscing elit, sed diam nonu mmy<br>mod tincidunt ut lao dolore.</p>
-						<a href="" class="viewTheProduct">View the Product<img src="images/viewMore.png"></a>
-					</li><li class="list">
+						<a href="" class="viewTheProduct">View the Product</a>
+					</li>
+					<li class="list">
 						<img class="onSale" src="images/sale_button.png">
 						<a href="" class="product"><img src="images/Other/product3.jpg"></a>
 						<span class="price">$2499.99</span>
 						<a href="" class="addToCart"><img src="images/addToCart_button.png"></a>
 						<h3>Professional Camera</h3>
 						<p>Lorem ipsum dolor sit amet, conse<br>adipiscing elit, sed diam nonu mmy<br>mod tincidunt ut lao dolore.</p>
-						<a href="" class="viewTheProduct">View the Product<img src="images/viewMore.png"></a>
-					</li><li class="list_last">
+						<a href="" class="viewTheProduct">View the Product</a>
+					</li>
+					<li class="list">
 						<a href="" class="product"><img src="images/Other/product4.jpg"></a>
 						<span class="price">$2499.99</span>
 						<a href="" class="addToCart"><img src="images/addToCart_button.png"></a>
 						<h3>EOS 2100D Camera</h3>
 						<p>Lorem ipsum dolor sit amet, conse<br>adipiscing elit, sed diam nonu mmy<br>mod tincidunt ut lao dolore.</p>
-						<a href="" class="viewTheProduct">View the Product<img src="images/viewMore.png"></a>
+						<a href="" class="viewTheProduct">View the Product</a>
+					</li>
+					<li class="list">
+						<img class="onSale" src="images/sale_button.png">
+						<a href="" class="product"><img src="images/Other/product1.jpg"></a>
+						<span class="price">$899.99</span>
+						<a href="" class="addToCart"><img src="images/addToCart_button.png"></a>
+						<h3>EOS 450D Camera</h3>
+						<p>Lorem ipsum dolor sit amet, conse<br>adipiscing elit, sed diam nonu mmy<br>mod tincidunt ut lao dolore.</p>
+						<a href="" class="viewTheProduct">View the Product</a>
+					</li>
+					<li class="list">
+						<a href="" class="product"><img src="images/Other/product2.jpg"></a>
+						<span class="price">$699.99</span>
+						<a href="" class="addToCart"><img src="images/addToCart_button.png"></a>
+						<h3>A Set of Camera Lenses</h3>
+						<p>Lorem ipsum dolor sit amet, conse<br>adipiscing elit, sed diam nonu mmy<br>mod tincidunt ut lao dolore.</p>
+						<a href="" class="viewTheProduct">View the Product</a>
+					</li>
+					<li class="list">
+						<img class="onSale" src="images/sale_button.png">
+						<a href="" class="product"><img src="images/Other/product3.jpg"></a>
+						<span class="price">$2499.99</span>
+						<a href="" class="addToCart"><img src="images/addToCart_button.png"></a>
+						<h3>Professional Camera</h3>
+						<p>Lorem ipsum dolor sit amet, conse<br>adipiscing elit, sed diam nonu mmy<br>mod tincidunt ut lao dolore.</p>
+						<a href="" class="viewTheProduct">View the Product</a>
+					</li>
+					<li class="list">
+						<a href="" class="product"><img src="images/Other/product4.jpg"></a>
+						<span class="price">$2499.99</span>
+						<a href="" class="addToCart"><img src="images/addToCart_button.png"></a>
+						<h3>EOS 2100D Camera</h3>
+						<p>Lorem ipsum dolor sit amet, conse<br>adipiscing elit, sed diam nonu mmy<br>mod tincidunt ut lao dolore.</p>
+						<a href="" class="viewTheProduct">View the Product</a>
 					</li>
 				</ul>
 			</div>
@@ -192,41 +210,77 @@
 			<div class="productTitle">
 				<div class="separator"></div>
 				<h2>FEATURED<span>PRODUCTS</span></h2>
-				<a href="" class="prevButton"></a>
-				<a href="" class="nextButton"></a>
+				<a href="" class="featuredPrevButton"></a>
+				<a href="" class="featuredNextButton"></a>
 			</div>
 			<!--ProductsContent-->
 			<div class="featuredProducts">
-				<ul>
+				<ul class="featuredSlide">
 					<li class="list">
 						<a href="" class="product"><img src="images/Other/product5.jpg"></a>
 						<span class="price">$2499.99</span>
 						<a href="" class="addToCart"><img src="images/addToCart_button.png"></a>
 						<h3>EOS 450D Camera</h3>
 						<p>Lorem ipsum dolor sit amet, conse<br>adipiscing elit, sed diam nonu mmy<br>mod tincidunt ut lao dolore.</p>
-						<a href="" class="viewTheProduct">View the Product<img src="images/viewMore.png"></a>
-					</li><li class="list">
+						<a href="" class="viewTheProduct">View the Product</a>
+					</li>
+					<li class="list">
 						<a href="" class="product"><img src="images/Other/product6.jpg"></a>
 						<span class="price">$499.99</span>
 						<a href="" class="addToCart"><img src="images/addToCart_button.png"></a>
 						<h3>Photography Umbrella</h3>
 						<p>Lorem ipsum dolor sit amet, conse<br>adipiscing elit, sed diam nonu mmy<br>mod tincidunt ut lao dolore.</p>
-						<a href="" class="viewTheProduct">View the Product<img src="images/viewMore.png"></a>
-					</li><li class="list">
+						<a href="" class="viewTheProduct">View the Product</a>
+					</li>
+					<li class="list">
 						<img class="onSale" src="images/sale_button.png">
 						<a href="" class="product"><img src="images/Other/product7.jpg"></a>
 						<span class="price">$749.59</span>
 						<a href="" class="addToCart"><img src="images/addToCart_button.png"></a>
 						<h3>EOS 450D Camera Lens</h3>
 						<p>Lorem ipsum dolor sit amet, conse<br>adipiscing elit, sed diam nonu mmy<br>mod tincidunt ut lao dolore.</p>
-						<a href="" class="viewTheProduct">View the Product<img src="images/viewMore.png"></a>
-					</li><li class="list_last">
+						<a href="" class="viewTheProduct">View the Product</a>
+					</li>
+					<li class="list">
 						<a href="" class="product"><img src="images/Other/product8.jpg"></a>
 						<span class="price">$5499.99</span>
 						<a href="" class="addToCart"><img src="images/addToCart_button.png"></a>
 						<h3>50 mm Camera Lens</h3>
 						<p>Lorem ipsum dolor sit amet, conse<br>adipiscing elit, sed diam nonu mmy<br>mod tincidunt ut lao dolore.</p>
-						<a href="" class="viewTheProduct">View the Product<img src="images/viewMore.png"></a>
+						<a href="" class="viewTheProduct">View the Product</a>
+					</li>
+					<li class="list">
+						<a href="" class="product"><img src="images/Other/product5.jpg"></a>
+						<span class="price">$2499.99</span>
+						<a href="" class="addToCart"><img src="images/addToCart_button.png"></a>
+						<h3>EOS 450D Camera</h3>
+						<p>Lorem ipsum dolor sit amet, conse<br>adipiscing elit, sed diam nonu mmy<br>mod tincidunt ut lao dolore.</p>
+						<a href="" class="viewTheProduct">View the Product</a>
+					</li>
+					<li class="list">
+						<a href="" class="product"><img src="images/Other/product6.jpg"></a>
+						<span class="price">$499.99</span>
+						<a href="" class="addToCart"><img src="images/addToCart_button.png"></a>
+						<h3>Photography Umbrella</h3>
+						<p>Lorem ipsum dolor sit amet, conse<br>adipiscing elit, sed diam nonu mmy<br>mod tincidunt ut lao dolore.</p>
+						<a href="" class="viewTheProduct">View the Product</a>
+					</li>
+					<li class="list">
+						<img class="onSale" src="images/sale_button.png">
+						<a href="" class="product"><img src="images/Other/product7.jpg"></a>
+						<span class="price">$749.59</span>
+						<a href="" class="addToCart"><img src="images/addToCart_button.png"></a>
+						<h3>EOS 450D Camera Lens</h3>
+						<p>Lorem ipsum dolor sit amet, conse<br>adipiscing elit, sed diam nonu mmy<br>mod tincidunt ut lao dolore.</p>
+						<a href="" class="viewTheProduct">View the Product</a>
+					</li>
+					<li class="list">
+						<a href="" class="product"><img src="images/Other/product8.jpg"></a>
+						<span class="price">$5499.99</span>
+						<a href="" class="addToCart"><img src="images/addToCart_button.png"></a>
+						<h3>50 mm Camera Lens</h3>
+						<p>Lorem ipsum dolor sit amet, conse<br>adipiscing elit, sed diam nonu mmy<br>mod tincidunt ut lao dolore.</p>
+						<a href="" class="viewTheProduct">View the Product</a>
 					</li>
 				</ul>
 			</div>
@@ -234,21 +288,22 @@
 			<div class="productTitle">
 				<div class="separator sponsorTitle"></div>
 				<h2>CHECK<span>OUR</span><span>BRANDS</span></h2>
+				<a href="" class="sponsorPrevButton"></a>
+				<a href="" class="sponsorNextButton"></a>
 			</div>
 			<!--SponsorContent-->
 			<div class="sponsor">
-				<ul>
-					<li class="sponsorList">
-						<a href=""><img src="images/Other/brand1.png"></a>
-					</li><li class="sponsorList">
-						<a href=""><img src="images/Other/brand2.png"></a>
-					</li><li class="sponsorList">
-						<a href=""><img src="images/Other/brand3.png"></a>
-					</li><li class="sponsorList">
-						<a href=""><img src="images/Other/brand4.png"></a>
-					</li><li class="sponsorLastList">
-						<a href=""><img src="images/Other/brand5.png"></a>
-					</li>
+				<ul class="sponsorSlide">
+					<li class="sponsorList"><a href=""><img src="images/Other/brand1.png"></a></li>
+					<li class="sponsorList"><a href=""><img src="images/Other/brand2.png"></a></li>
+					<li class="sponsorList"><a href=""><img src="images/Other/brand3.png"></a></li>
+					<li class="sponsorList"><a href=""><img src="images/Other/brand4.png"></a></li>
+					<li class="sponsorLastList"><a href=""><img src="images/Other/brand5.png"></a></li>
+					<li class="sponsorList"><a href=""><img src="images/Other/brand1.png"></a></li>
+					<li class="sponsorList"><a href=""><img src="images/Other/brand2.png"></a></li>
+					<li class="sponsorList"><a href=""><img src="images/Other/brand3.png"></a></li>
+					<li class="sponsorList"><a href=""><img src="images/Other/brand4.png"></a></li>
+					<li class="sponsorLastList"><a href=""><img src="images/Other/brand5.png"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -262,46 +317,46 @@
 					<a href="" class="logo"></a>
 					<h2>Follow<span>us</span></h2>
 					<ul>
-						<li>
-							<a target="_blank" class="rss" href="https://www.rss.com/"></a>
-						</li><li>
-							<a target="_blank" class="pinterest" href="https://www.pinterest.com/"></a>
-						</li><li>
-							<a target="_blank" class="facebook" href="https://www.facebook.com/"></a>
-						</li><li>
-							<a target="_blank" class="twitter" href="https://twitter.com/"></a>
-						</li><li>
-							<a target="_blank" class="dribble" href="https://dribbble.com/"></a>
-						</li>
+						<li><a target="_blank" class="rss" href="https://www.rss.com/"></a></li>
+						<li><a target="_blank" class="pinterest" href="https://www.pinterest.com/"></a></li>
+						<li><a target="_blank" class="facebook" href="https://www.facebook.com/"></a></li>
+						<li><a target="_blank" class="twitter" href="https://twitter.com/"></a></li>
+						<li><a target="_blank" class="dribble" href="https://dribbble.com/"></a></li>
 					</ul>
-				</li><li class="column2">
+				</li>
+				<li class="column2">
 					<h2>Recent<span>Posts</span></h2>
 					<ul>
 					 	<li>
 					 		<a href=""><img src="images/Other/recentPost1.png"></a>
 					 		<h4>New<span>Camera</span><span>Set</span></h4>
 					 		<p>posted<span>by</span><span><a href="">Admin</a></span></p>
-					 	</li><li>
+					 	</li>
+					 	<li>
 					 		<a href=""><img src="images/Other/recentPost2.png"></a>
 					 		<h4>Special<span>Camera</span><span>Lenses</span></h4>
 					 		<p>posted<span>by</span><span><a href="">Gljivec</a></span></p>
 					 	</li>
 					</ul>
-				</li><li class="column3">
+				</li>
+				<li class="column3">
 					<h2>Contacts</h2>
 					<ul>
 						<li>
 							<p>1000 Ljubljana</p>
 							<p>Celovska cesta 135</p>
 							<p>Country Slovenia</p>
-						</li><li>
+						</li>
+						<li>
 							<p>Phone: (+386) 40 123 456</p>
 							<p>Mobile: (+386) 40 654 123</p>
-						</li><li>
+						</li>
+						<li>
 							<p>info@premiumcoding.com</p>
 						</li>
 					</ul> 
-				</li><li class="column4">
+				</li>
+				<li class="column4">
 					<h2>What<span>People</span><span>Say</span></h2>
 					<ul>
 						<li>
@@ -312,7 +367,8 @@
 							<div class="comment">
 								<p>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br>Integer dolor orci</p>
 							</div>
-						</li><li>
+						</li>
+						<li>
 							<div class="commenter">
 								<img src="images/Other/comment2.png">
 								<p>ERICA</p>
@@ -330,15 +386,10 @@
 	<div id="bottombar">
 		<div>
 			<ul class="bottomNav">
-				<li>
-					<a href="">HOME</a>
-				</li><li>
-					<a href="">PORTFOLIO</a>
-				</li><li>
-					<a href="">SITEMAP</a>
-				</li><li>
-					<a href="">CONTACT</a>
-				</li>
+				<li><a href="">HOME</a></li>
+				<li><a href="">PORTFOLIO</a></li>
+				<li><a href="">SITEMAP</a></li>
+				<li><a href="">CONTACT</a></li>
 			</ul>
 			<p class="copyRight">CameraStore<span>@2013</span><span>by</span><span>PremiumCoding</span><span>|</span><span>ALL</span><span>Rights</span><span>Reserved</span></p>
 		</div>		

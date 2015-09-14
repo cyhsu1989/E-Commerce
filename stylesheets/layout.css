@@ -4,22 +4,6 @@ blockquote, pre, form, fieldset, table, th, td {
 	margin: 0; padding: 0; 
 }
 
-/*-----------Basic-----------*/
-body{
-	background-color: #FFF;
-	background-image: url(../images/background.jpg);
-	background-repeat: repeat;
-	font-family: PT-Sans2,Helvetica,Sans-serif, Century Gothic, Arial;
-	font-size: 16px;
-	line-height: 1;
-	min-width: 1182px;
-}
-
-#header_warp,#content_warp{
-	margin: 0px auto;
-	width: 1182px;
-	height: 100%;
-}
 @font-face{
 	font-family: PT-Sans;
 	src: url(../font/PTN57F.ttf);
@@ -28,6 +12,24 @@ body{
 	font-family: PT-Sans2;
 	src: url(../font/PTS55F.ttf);
 }
+
+/*-----------Basic-----------*/
+body{
+	background-color: #FFF;
+	background-image: url(../images/background.jpg);
+	background-repeat: repeat;
+	font-size: 16px;
+	min-width: 1182px;
+	line-height: 1;
+	font-family: PT-Sans2,Sans-serif, Century Gothic, Arial;
+}
+
+#header_wrap,#content_wrap{
+	margin: 0px auto;
+	width: 1182px;
+	height: 100%;
+}
+
 span{ margin-left: 4px;}
 a{text-decoration: none}
 
@@ -74,7 +76,7 @@ a{text-decoration: none}
 	
 	/*右邊連結*/
 	.topbar_inner ul{float: right; padding-top: 5px;}
-	.topbar_inner li{ display: inline-block;}
+	.topbar_inner li{float: left; list-style: none;}
 	.topbar_inner li>a, .topbar_inner li>span{
 		color: inherit; 
 		margin-left: 13px;
@@ -112,7 +114,8 @@ a{text-decoration: none}
 	.icon input{float: left;}
 	.icon ul{float: right;}
 	.icon li{
-		display: inline-block;
+		float: left;
+		list-style: none;
 		margin-left: 5px;
 		width: 40px;
 		height: 40px;
@@ -225,7 +228,7 @@ a{text-decoration: none}
 ------------------------------*/
 
 /*-----------SlideShow(JQuery)-----------*/
-#slideShow_warp{
+#slideShow_wrap{
 	background-image: url(../images/container_bg.jpg);
 	overflow: visible;
 	position: relative;
@@ -256,7 +259,7 @@ a{text-decoration: none}
 
 
 /*-----slideShow前、後按鈕-----*/
-	#slideShow_warp span.prev{
+	#slideShow_wrap span.prev{
 		display: block;
 		position: absolute;
 		top: 170px;
@@ -266,7 +269,7 @@ a{text-decoration: none}
 		text-indent: -9999px;
 		z-index: 9;
 	}
-	#slideShow_warp span.next{
+	#slideShow_wrap span.next{
 		display: block;
 		position: absolute;
 		top: 170px;
@@ -276,10 +279,10 @@ a{text-decoration: none}
 		text-indent: -9999px;
 		z-index: 9;
 	}
-	#slideShow_warp .prev{
+	#slideShow_wrap .prev{
 		background: url(../images/slideShowLeft_button.png) no-repeat;
 	}
-	#slideShow_warp .next{
+	#slideShow_wrap .next{
 		background: url(../images/slideShowRight_button.png) no-repeat;
 }
 /*HoverEffect*/
@@ -378,26 +381,25 @@ a{text-decoration: none}
 		width: 1132px;
 		height: 20px;
 	}
-	.sponsorTitle{width: 1182px;}
-	.productTitle a{
-		display: block;
-		position: absolute;
-		margin-top: -27px;
-		width: 22px;
+/*	.sponsorTitle{width: 1182px;}*/
+	.productTitle a{	/*商品標題小按鈕*/
 		height: 23px;
+		width: 22px;
+		position: absolute;
+		display: block;
 	}
-	.productTitle .prevButton{		/*小按鈕*/
+	.recentPrevButton, .featuredPrevButton, .sponsorPrevButton{	/*商品標題小按鈕*/
 		background-image: url(../images/left_button.png);
 		/*margin-left: 1135px;*/
 		position: absolute;
-		top: 30px;
+		top: 0;
 		right: 24px;
 	}
-	.productTitle .nextButton{		/*小按鈕*/
+	.recentNextButton, .featuredNextButton, .sponsorNextButton{	/*商品標題小按鈕*/
 		background-image: url(../images/right_button.png);
 		/*margin-left: 1160px;*/
 		position: absolute;
-		top: 30px;
+		top: 0;
 		right: 0;
 }
 /*HoverEffect*/
@@ -409,28 +411,28 @@ a{text-decoration: none}
 	width: 100%;
 	height: 430px;
 }
-	.recentProducts ul ,.featuredProducts ul{
+	.recentProducts ul ,.featuredProducts ul{	
 		list-style: none;
+		overflow: auto; /*消除float副作用*/
 		width: 100%;
 	}
-	.recentProducts li{
+
+	.recentProducts li{		/*Rectne Products*/
 		border: 1px solid #efefef;
 		border-radius: 5px;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
-		background-color: #fff;
-		background-image: url(../images/bottomBorder.png);
-		background-repeat: repeat-x;
-		background-position: bottom;
-		display: inline-block;
+		background: #fff url(../images/bottomBorder.png) repeat-x bottom;
+		float: left;
 		position: relative;
-		width: 278px;	
 		height: 423px;
+		width: 278px;	
 	}
-	.featuredProducts li{
+
+	.featuredProducts li{	/*Featured Products*/
 		border-bottom: 1px solid #efefef; 
 		background-color: #fff;
-		display: inline-block;
+		float: left;
 		position: relative;
 		width: 280px;	
 		height: 425px;
@@ -481,11 +483,12 @@ a{text-decoration: none}
 			margin-bottom: 15px;
 			padding: 0 36px 18px 15px;
 		}
-		.viewTheProduct{ /*連結*/
-			color: #95b924;
+		.viewTheProduct{ /*View the Product連結*/
+			background: url(../images/viewMore.png) no-repeat right 3px;
+			color: #95b924;	
 			float: left;
-			display: block;
 			padding-left: 15px;
+			padding-right: 15px;/*推擠按鈕空間*/
 		}
 /*HoverEffect*/
 	.product:hover{opacity: 0.8;}
@@ -494,7 +497,6 @@ a{text-decoration: none}
 
 /*-----Sponsor-----*/
 .sponsor{
-	float: left;
 	margin-bottom: 65px;
 	width: 100%;
 }
@@ -503,13 +505,12 @@ a{text-decoration: none}
 		height: 130px;
 	}
 		.sponsor li{
-			border-right: 1px solid #dedede;
+			border: 1px solid #dedede;
 			background-color: #fff;
 			display: inline-block;
 			width: 235px;
 			height: 100%;
 		}	
-		li.sponsorLastList{border-right: none;}
 		.sponsor a{
 			display: inline-block;
 			width: 100%;
@@ -529,16 +530,16 @@ a{text-decoration: none}
 	position: fixed;
 	right: 80px;
 	bottom: 0px;
+	opacity: 0.6;
 	z-index: 99;
 }
 /*HoverEffect*/
-#goTop:hover{opacity: 0.8;}
+#goTop:hover{opacity: 1;}
 
 #footer{
 	border-top: 1px solid #dddddd;
 	border-bottom: 1px solid #dddddd;
 	background-color: #fff;
-	float: left;
 	padding-top: 47px;
 	width: 100%;
 	height: 290px;
@@ -559,9 +560,8 @@ a{text-decoration: none}
 	.footer >li ul{
 		list-style-type: none;
 	}
-
+	.column1,.column2,.column3{margin-right: 62px;}
 		/*Column1*/
-		.column1{margin-right: 59px;}
 			a.logo{
 				background: url(../images/logo.png) no-repeat;
 				background-size: 100% 100%;
@@ -571,8 +571,10 @@ a{text-decoration: none}
 				height: 48px;
 			}
 			.column1 h2{margin-bottom: 19px;}
+
+			.column1 ul{overflow: auto;}
 			.column1 li{
-				display: inline-block;
+				float: left;
 				margin-right: 5px;
 			}
 			.column1 li>a{
@@ -585,14 +587,15 @@ a{text-decoration: none}
 	.column1 li>a:hover{background-color: #95b924;}
 
 		/*Column2*/
-		.column2{margin-right:50px;width: 265px;}
+		.column2{width: 265px;}
 		.column2 h2{margin-bottom: 25px;}
+		.column2 ul{overflow: auto;}
 			.column2 li{
 				border: 1px solid #dddddd;
 				border-radius: 10px;
 				-moz-border-radius: 10px;
 				-webkit-border-radius: 10px;
-				display: block;
+				float: left;
 				margin-bottom: 16px;
 				overflow: hidden;
 				height: 68px;
@@ -616,7 +619,6 @@ a{text-decoration: none}
 	.column2 li>a:hover{opacity: 0.8;}
 
 		/*Column3*/
-		.column3{margin-right: 55px;}
 			.column3 h2{margin-bottom: 24px;}
 			.column3 li{margin-bottom: 32px;}
 			.column3  p{
@@ -626,7 +628,7 @@ a{text-decoration: none}
 
 		/*Column4*/
 		.column4 h2{margin-bottom: 19px}
-		.column4 ul{width: 329px;overflow: auto;}
+		.column4 ul{width: 330px;overflow: auto;}
 			.column4 li{
 				float: left;
 				margin-bottom: 22px;
@@ -640,7 +642,6 @@ a{text-decoration: none}
 					text-align: center;
 				}
 				.comment{
-					border: 1px solid #dddddd;
 					border-radius: 10px;
 					-moz-border-radius: 10px;
 					-webkit-border-radius: 10px;
@@ -650,6 +651,7 @@ a{text-decoration: none}
 					line-height: normal;
 					width: 235px;
 					height: 93px;
+					border: 1px solid #dddddd;
 				}
 				.comment p{
 					padding:11px 0px 29px 13px;
@@ -659,22 +661,22 @@ a{text-decoration: none}
 
 /*-----------BottomBar-----------*/
 #bottombar{
-	border-top: 5px solid #97b728;
+	border-top: 3px solid #97b728;
 	background-color: #1b1b1b;
-	float: left;
 	font-size: 12px;
 	color: #9b9b9b;
 	margin: 0 auto;
 	width: 100%;
-	height: 100%;
+	height: 31px;
 }
 	#bottombar div{
 		margin: 0 auto;
 		width: 1182px;
 		height: 100%;
 	}
-	.bottomNav {
-		display: inline-block;
+	.bottomNav{
+		float: left;
+		overflow: auto;
 		padding: 8px 0;
 	}
 	.bottomNav li{ /*左邊導覽*/
@@ -696,8 +698,3 @@ a{text-decoration: none}
 /*------------------------------
 		Media Queries
 ------------------------------*/
-@media screen and (max-width: 480px){
-	body{
-		min-width: 100%;
-	}
-}

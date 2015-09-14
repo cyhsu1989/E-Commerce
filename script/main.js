@@ -1,4 +1,35 @@
 $(document).ready(function(){
+			//SlideShow for Recent Products
+			$('.recentSlide').slick({
+   				infinite: true,
+  				slidesToShow: 4,
+  				slidesToScroll: 4,
+  				variableWidth: true,
+  				prevArrow: '.recentPrevButton',
+  				nextArrow: '.recentNextButton'
+  			});
+  			//SlideShow for Featured Products
+  			$('.featuredSlide').slick({
+   				infinite: true,
+  				slidesToShow: 4,
+  				slidesToScroll: 4,
+  				variableWidth: true,
+  				prevArrow: '.featuredPrevButton',
+  				nextArrow: '.featuredNextButton'
+  			});
+			
+			//SlideShow for sponsor
+  			$('.sponsorSlide').slick({
+   				infinite: true,
+   				autoplay: true,
+   				autoplaySpeed: 3000,
+  				slidesToShow: 5,
+  				slidesToScroll: 1,
+  				prevArrow: '.sponsorPrevButton',
+  				nextArrow: '.sponsorNextButton'
+  			});
+
+
 			//Retina Image	
 			$('.retina').retina();
 
@@ -15,7 +46,7 @@ $(document).ready(function(){
 		        scrollbarMargin: '0 30px 16px 30px',
 		        scrollbarOpacity: '0.75',
 		        //onSlideChange: slideChange,
-		        autoSlide: false,
+		        autoSlide: true,
 		        autoSlideTimer: 5000,
 		        autoSlideTransTimer: 1000,
 		        autoSlideHoverPause: true,
