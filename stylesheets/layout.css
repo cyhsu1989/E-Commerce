@@ -117,8 +117,6 @@ a{text-decoration: none}
 		float: left;
 		list-style: none;
 		margin-left: 5px;
-		width: 40px;
-		height: 40px;
 	}
 
 /*---處理搜尋框與按鈕的位置---*/
@@ -146,19 +144,18 @@ a{text-decoration: none}
 		height: 100%;
 	}
 /*---處理每個icon的背景及外框圓角等效果---*/
-	.icon li, .bottomIcon li{
+	.iconHover{
 		background: url(../images/icon.png) no-repeat;
 		background-color: #cfcfcf;
 		border-radius: 5px;
+		display: block;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
-		width: 40px;
-		height: 40px;
 		-webkit-transition: background 0.3s;
-         transition: background 0.3s;
+        transition: background 0.3s;
+        width: 40px;
+		height: 40px;
 	}
-	.icon li>a, .bottomIcon li>a{display: block; width: 100%; height: 100%;}
-
 		/*Each Icon Position and HoverEffect*/
 		.iconHover.rss{background-position: 0 0;}
 		.iconHover.rss:hover{
