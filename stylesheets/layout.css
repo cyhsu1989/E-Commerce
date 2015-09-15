@@ -122,12 +122,18 @@ a{text-decoration: none}
 	}
 
 /*---處理搜尋框與按鈕的位置---*/
-	.icon input[type=image]{
+	.icon input[type=image]{ /*搜尋紐*/
+		background-color: #cfcfcf;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
 		position: relative;
 		left: 35px;
+		width: 40px;
+		height: 40px;
 		z-index: 1;
 	}
-	.icon input[type=search]{
+	.icon input[type=search]{ /*搜尋框*/
 		border: 1px solid #cfcfcf;
 		border-radius: 5px;
 		-moz-border-radius: 5px;
@@ -139,16 +145,52 @@ a{text-decoration: none}
 		width: 250px;
 		height: 100%;
 	}
-/*---處理每個icon的背景及外框圓角---*/
-	.icon li,input[type=image]{
+/*---處理每個icon的背景及外框圓角等效果---*/
+	.icon li, .bottomIcon li{
+		background: url(../images/icon.png) no-repeat;
 		background-color: #cfcfcf;
 		border-radius: 5px;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
 		width: 40px;
 		height: 40px;
+		-webkit-transition: background 0.3s;
+         transition: background 0.3s;
 	}
-		.rss{
+	.icon li>a, .bottomIcon li>a{display: block; width: 100%; height: 100%;}
+
+		/*HoverEffect*/
+		.iconHover.rss{background-position: 0 0;}
+		.iconHover.rss:hover{
+			background-color: #f36f24;
+			background-position: 0 -40px;
+		}
+
+		.iconHover.pinterest{background-position: -46px 0;}
+		.iconHover.pinterest:hover{
+			background-color: #bd2126; 
+			background-position: -46px -40px;
+		}
+
+		.iconHover.facebook{background-position: -92px 0}
+		.iconHover.facebook:hover{
+			background-color: #4862a3; 
+			background-position: -92px -40px;
+		}
+
+		.iconHover.twitter{background-position: -138px 0;}
+		.iconHover.twitter:hover{
+			background-color: #55acee; 
+			background-position: -138px -40px;
+		}
+
+		.iconHover.dribble{background-position: -184px 0}
+		.iconHover.dribble:hover{
+			background-color: #ea4c89; 
+			background-position: -184px -40px;
+		}
+
+	/*	.rss{
 			display: block;
 			background: url(../images/icon_rss.png) no-repeat center center;
 			width: 40px;
@@ -177,16 +219,10 @@ a{text-decoration: none}
 			background: url(../images/icon_dribble.png) no-repeat center center;
 			width: 40px;
 			height: 40px;
-		}
+		}*/
 
 /*HoverEffect*/
-	.icon a:hover{
-		background-color: #98b827;
-		border-radius: 5px;
-		-moz-border-radius: 5px;
-		-webkit-border-radius: 5px;
-	}
-	.icon input[type=image]:hover{opacity: 0.5;}
+	.icon input[type=image]:hover{background-color: #98b827;}
 
 
 /*-----------Menu-----------*/
@@ -581,20 +617,19 @@ a{text-decoration: none}
 				height: 48px;
 			}
 			.column1 h2{margin-bottom: 19px;}
-
 			.column1 ul{overflow: auto;}
 			.column1 li{
 				float: left;
 				margin-right: 5px;
 			}
-			.column1 li>a{
+		/*	.column1 li>a{
 				background-color: #cfcfcf;
 				border-radius: 5px;
 				-moz-border-radius: 5px;
 				-webkit-border-radius: 5px;
-			}
+			}*/
 /*HoverEffect*/
-	.column1 li>a:hover{background-color: #95b924;}
+/*	.column1 li>a:hover{background-color: #95b924;}*/
 
 		/*Column2*/
 		.column2{width: 265px;}
