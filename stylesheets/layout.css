@@ -160,7 +160,7 @@ a{text-decoration: none}
 		.iconHover.rss{background-position: 0 0;}
 		.iconHover.rss:hover{
 			background-color: #f36f24;
-			background-position: 0 -40px;
+			background-position: 0px -40px;
 		}
 
 		.iconHover.pinterest{background-position: -46px 0;}
@@ -551,11 +551,8 @@ a{text-decoration: none}
 	position: fixed;
 	right: 80px;
 	bottom: 0px;
-	opacity: 0.6;
 	z-index: 99;
 }
-/*HoverEffect*/
-#goTop:hover{opacity: 1;}
 
 #footer{
 	border-top: 1px solid #dddddd;
