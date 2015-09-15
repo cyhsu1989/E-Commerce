@@ -159,7 +159,7 @@ a{text-decoration: none}
 	}
 	.icon li>a, .bottomIcon li>a{display: block; width: 100%; height: 100%;}
 
-		/*HoverEffect*/
+		/*Each Icon Position and HoverEffect*/
 		.iconHover.rss{background-position: 0 0;}
 		.iconHover.rss:hover{
 			background-color: #f36f24;
@@ -265,7 +265,7 @@ a{text-decoration: none}
 
 /*-----------SlideShow(JQuery)-----------*/
 #slideShow_wrap{
-	/*background-image: url(../images/container_bg.jpg);*/
+	background-image: url(../images/container_bg.jpg);
 	position: relative;
 	width: 100%;
 	height: 420px;
@@ -278,28 +278,6 @@ a{text-decoration: none}
 		 		margin-right: 1px;
 				float: left;
 			}
-
-/*	.iosSliderContainer{
-		position: relative;
-		margin: 0 auto;
-		overflow: hidden;
-		width: 1180px;
-		height: 420px;
-	}
-		.iosSlider{
-			width: 100%;
-			height: 420px;
-		}
-		.iosSlider .slider{
-			position: absolute;
-			width: 100%;
-			height: 100%;
-		}
-		.iosSlider .slider .slide{
-			float: left;
-			width: 1180px;
-			height: 420px;
-		}*/
 
 
 /*-----slideShow前、後按鈕-----*/
