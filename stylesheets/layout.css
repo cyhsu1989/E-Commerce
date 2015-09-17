@@ -24,6 +24,11 @@ body{
 	height: 100%;
 }
 
+*{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
 span{ margin-left: 4px;}
 a{text-decoration: none}
 
@@ -36,7 +41,7 @@ a{text-decoration: none}
 	color: #797979;
 	margin-bottom: 46px;
 	width: 100%;
-	height: 29px;
+	height: 32px;
 }
 	#topbar .topbar_inner{
 		font-size: 14px;
@@ -48,11 +53,12 @@ a{text-decoration: none}
 		display: inline;
 		float: left;
 		margin-right: 49px;
-		line-height: normal;
+		
 		padding-top: 4px;
 	}
 	.topbar_inner p a,select{
 		color: #98b827;
+		line-height: normal;
 	}
 	.selectStyle select{
 		-webkit-appearance: none;
@@ -115,9 +121,9 @@ a{text-decoration: none}
 /*---處理搜尋框與按鈕的位置---*/
 	.icon input[type=image]{ /*搜尋紐*/
 		background-color: #cfcfcf;
-		border-radius: 5px;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
+		border-radius: 5px;
 		position: relative;
 		left: 35px;
 		width: 40px;
@@ -126,9 +132,9 @@ a{text-decoration: none}
 	}
 	.icon input[type=search]{ /*搜尋框*/
 		border: 1px solid #cfcfcf;
-		border-radius: 5px;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
+		border-radius: 5px;
 		-moz-box-sizing: border-box;
 		position: relative;
 		left: 75px;
@@ -140,10 +146,10 @@ a{text-decoration: none}
 	.iconHover{
 		background: url(../images/icon.png) no-repeat;
 		background-color: #cfcfcf;
-		border-radius: 5px;
-		display: block;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		display: block;
 		-webkit-transition: background 0.3s;
         transition: background 0.3s;
         width: 40px;
@@ -180,37 +186,6 @@ a{text-decoration: none}
 			background-position: -184px -40px;
 		}
 
-	/*	.rss{
-			display: block;
-			background: url(../images/icon_rss.png) no-repeat center center;
-			width: 40px;
-			height: 40px;
-		}
-		.pinterest{
-			display: block;
-			background: url(../images/icon_pinterest.png) no-repeat center center;
-			width: 40px;
-			height: 40px;
-		}
-		.facebook{
-			display: block;
-			background: url(../images/icon_facebook.png) no-repeat center center;
-			width: 40px;
-			height: 40px;
-		}
-		.twitter{
-			display: block;
-			background: url(../images/icon_twitter.png) no-repeat center center;
-			width: 40px;
-			height: 40px;
-		}
-		.dribble{
-			display: block;
-			background: url(../images/icon_dribble.png) no-repeat center center;
-			width: 40px;
-			height: 40px;
-		}*/
-
 /*HoverEffect*/
 	.icon input[type=image]:hover{background-color: #98b827;}
 
@@ -227,9 +202,10 @@ a{text-decoration: none}
 	height: 86px;
 }
 	.nav ul{
-		margin-top: 30px;
+		padding-top: 37px;
+		padding-right: 402px;
 		width: 100%;
-		height: 21px;
+		height: 100%;
 	}
 		.nav li{
 			display: inline-block;
@@ -239,11 +215,10 @@ a{text-decoration: none}
 			color: #000;
 		}
 		.buyCartButton{
-			padding-top: 0px;
 			position: absolute;
-			top: 16px;
+			top: 17px;
 			right: 0;
-			margin-right: 0;
+			height: 54px;
 		}
 /*HoverEffect*/
 	.nav a:hover{color: #98b827;}
@@ -293,9 +268,11 @@ a{text-decoration: none}
 	}
 	#slideShow_wrap .prev{
 		background: url(../images/slideShowLeft_button.png) no-repeat;
+		cursor: pointer;
 	}
 	#slideShow_wrap .next{
 		background: url(../images/slideShowRight_button.png) no-repeat;
+		cursor: pointer;
 }
 /*HoverEffect*/
 	.prev, .next{opacity: 0.7;}
@@ -361,10 +338,12 @@ a{text-decoration: none}
 		color: #222224;
 		font-family: PT-Sans;
 		font-size: 44px;
-		padding: 16px 0 0 19px;
+		padding: 21px 120px 19px 19px;
+		width: 100%;
+		height: 100%;
 	}
 	.quote p>span{margin-left: 11px;}
-	.quote a{
+	.quote a{	/*Visit the Store 按鈕*/
 		display: block;
 		position: absolute;
 		top: 14px;
@@ -385,6 +364,7 @@ a{text-decoration: none}
 		background: url("../images/background.jpg") repeat;
 		display: inline-block;
 		font-size: 24px;
+		font-weight: bold;
 		position: relative;
 	}
 	.separator{			/*分隔線*/
@@ -433,14 +413,14 @@ a{text-decoration: none}
 
 	.recentProducts li{		/*Rectne Products*/
 		border: 1px solid #efefef;
-		border-radius: 5px;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
-		background: #fff url(../images/bottomBorder.png) repeat-x bottom;
+		border-radius: 5px;
+		background: #fff url(../images/bottomBorder.png) repeat-x bottom;;
 		float: left;
 		position: relative;
-		height: 423px;
-		width: 278px;	
+		width: 280px;
+		height: 426px;
 	}
 
 	.featuredProducts li{	/*Featured Products*/
@@ -485,24 +465,27 @@ a{text-decoration: none}
 			font-size: 20px;
 			font-weight: normal;
 			margin-bottom: 0px;
-			padding: 21px 0 15px 15px;
-			width: 265px;
+			padding: 20px 0 10px 15px;
+			width: 100%;
 		}
 		.recentProducts li>p,.featuredProducts li>p{/*商品敘述*/
 			color: #9b9b9b;
 			clear: both;
-			border-bottom: 1px solid #e7e7e7;
 			font-size: 14px;
-			line-height: 1.5;
-			margin-bottom: 15px;
-			padding: 0 36px 18px 15px;
+			line-height: 1.5em;
+			padding: 0 36px 0px 15px;
 		}
 		.viewTheProduct{ /*View the Product連結*/
-			background: url(../images/viewMore.png) no-repeat right 3px;
+			border-top: 1px solid #e7e7e7;
+			display: block;
+			background: url(../images/viewMore.png) no-repeat center center;
 			color: #95b924;	
 			float: left;
-			padding-left: 15px;
-			padding-right: 15px;/*推擠按鈕空間*/
+			position: absolute;
+			bottom: 6px;
+			padding: 16px 0 0 15px;	/*推擠按鈕空間*/
+			width: 100%;
+			height: 51px;
 		}
 /*HoverEffect*/
 	.product:hover{opacity: 0.8;}
@@ -512,18 +495,17 @@ a{text-decoration: none}
 /*-----Sponsor-----*/
 .sponsor{
 	margin-bottom: 65px;
-	width: 100%;
 }
 	.sponsor ul{
 		border: 1px solid #dedede;
-		height: 130px;
+		width: 1180px;
 	}
 		.sponsor li{
-			border: 1px solid #dedede;
+			border-right: 1px solid #dedede;
 			background-color: #fff;
-			display: inline-block;
-			width: 235px;
-			height: 100%;
+			float: left;
+			width: 237px;
+			height: 132px;
 		}	
 		.sponsor a{
 			display: inline-block;
@@ -532,7 +514,7 @@ a{text-decoration: none}
 		}
 		.sponsor img{
 			display: block;
-			margin: 0px auto 0 auto;
+			margin: 0 auto 0 auto;
 		}
 /*HoverEffect*/
 .sponsor a:hover{opacity: 0.5;}
@@ -553,7 +535,7 @@ a{text-decoration: none}
 	background-color: #fff;
 	padding-top: 47px;
 	width: 100%;
-	height: 290px;
+	height: 339px;
 }
 	#footer h2{
 		font-size: 24px;
@@ -602,9 +584,9 @@ a{text-decoration: none}
 		.column2 ul{overflow: auto;}
 			.column2 li{
 				border: 1px solid #dddddd;
-				border-radius: 10px;
 				-moz-border-radius: 10px;
 				-webkit-border-radius: 10px;
+				border-radius: 10px;
 				float: left;
 				margin-bottom: 16px;
 				overflow: hidden;
@@ -617,6 +599,7 @@ a{text-decoration: none}
 			}
 			.column2 li h4{  /*Post Title*/
 				float: left;
+				font-weight: bold;
 				margin-bottom: 10px;
 				padding-top: 15px;
 			}
@@ -652,19 +635,19 @@ a{text-decoration: none}
 					text-align: center;
 				}
 				.comment{
-					border-radius: 10px;
 					-moz-border-radius: 10px;
 					-webkit-border-radius: 10px;
+					border-radius: 10px;
 					background: #f6f4f4 url(../images/comment.png) no-repeat right bottom;
 					float: left;
 					font-size: 14px;
 					line-height: normal;
-					width: 235px;
-					height: 93px;
+					width: 237px;
+					height: 95px;
 					border: 1px solid #dddddd;
 				}
 				.comment p{
-					padding:11px 0px 29px 13px;
+					padding:11px 45px 29px 13px;
 				}
 /*HoverEffect*/
 	.column4 img:hover{opacity: 0.8;}

@@ -38,6 +38,7 @@ $(document).ready(function(){
    				autoplaySpeed: 3000,
   				slidesToShow: 5,
   				slidesToScroll: 1,
+  				variableWidth: true,
   				prevArrow: '.sponsorPrevButton',
   				nextArrow: '.sponsorNextButton'
   			});
@@ -61,5 +62,5 @@ $(document).ready(function(){
 				$('html,body').animate({scrollTop: 0}, 800);
 				return false;
 			})
-			//$('.slideShowText:hidden, .opacityBG:hidden').fadeIn(1000);
+			
 		});
