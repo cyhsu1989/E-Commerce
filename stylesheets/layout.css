@@ -367,6 +367,7 @@ a{text-decoration: none}
 		font-weight: bold;
 		position: relative;
 	}
+	.productTitle h2>span{margin-left: 7px;}
 	.separator{			/*分隔線*/
 		background-image: url(../images/separator.png);
 		background-repeat: repeat-x;
@@ -541,6 +542,8 @@ a{text-decoration: none}
 		font-size: 24px;
 		font-weight: normal;
 	}
+	#footer h2>span{margin-left: 8px;}
+
 	.footer{
 		margin: 0 auto;
 		overflow: auto;
