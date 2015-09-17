@@ -465,7 +465,7 @@ a{text-decoration: none}
 			font-size: 20px;
 			font-weight: normal;
 			margin-bottom: 0px;
-			padding: 20px 0 10px 15px;
+			padding: 20px 0 18px 15px;
 			width: 100%;
 		}
 		.recentProducts li>p,.featuredProducts li>p{/*商品敘述*/
@@ -473,7 +473,7 @@ a{text-decoration: none}
 			clear: both;
 			font-size: 14px;
 			line-height: 1.5em;
-			padding: 0 36px 0px 15px;
+			padding: 0 36px 20px 15px;
 		}
 		.viewTheProduct{ /*View the Product連結*/
 			border-top: 1px solid #e7e7e7;
@@ -582,7 +582,7 @@ a{text-decoration: none}
 		.column2{width: 265px;}
 		.column2 h2{margin-bottom: 25px;}
 		.column2 ul{overflow: auto;}
-			.column2 li{
+			.column2 li{	/*Recent Posts方框*/
 				border: 1px solid #dddddd;
 				-moz-border-radius: 10px;
 				-webkit-border-radius: 10px;
@@ -590,7 +590,7 @@ a{text-decoration: none}
 				float: left;
 				margin-bottom: 16px;
 				overflow: hidden;
-				height: 68px;
+				height: 70px;
 			}
 			.column2 li>a{
 				float: left;
@@ -600,8 +600,8 @@ a{text-decoration: none}
 			.column2 li h4{  /*Post Title*/
 				float: left;
 				font-weight: bold;
-				margin-bottom: 10px;
-				padding-top: 15px;
+				/*margin-bottom: 10px;*/
+				padding: 15px 12px 10px 0;
 			}
 			.column2 li p{	/*posted by*/
 				font-size: 14px;
