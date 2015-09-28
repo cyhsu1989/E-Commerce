@@ -19,7 +19,13 @@ $(document).ready(function(){
   				slidesToScroll: 4,
   				variableWidth: true,
   				prevArrow: '.recentPrevButton',
-  				nextArrow: '.recentNextButton'
+  				nextArrow: '.recentNextButton',
+  				responsive: [
+					{
+						breakpoint: 569,
+					    settings: "unslick"
+					}
+				]
   			});
   			//SlideShow for Featured Products
   			$('.featuredSlide').slick({
@@ -28,7 +34,13 @@ $(document).ready(function(){
   				slidesToScroll: 4,
   				variableWidth: true,
   				prevArrow: '.featuredPrevButton',
-  				nextArrow: '.featuredNextButton'
+  				nextArrow: '.featuredNextButton',
+  				responsive: [
+					{
+						breakpoint: 569,
+					    settings: "unslick"
+					}
+				]
   			});
 			
 			//SlideShow for sponsor

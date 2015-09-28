@@ -331,29 +331,28 @@ a{text-decoration: none}
 }
 /*-----slideShow下方引用-----*/
 .quote{
-	background-color: #fff;
 	border-bottom: 1px solid #cdcdcd;
+	background-color: #fff;
 	/*box-shadow: 0 1px 1px #777777;*/
 	margin-bottom: 65px;
 	position: relative;
 	width: 100%;
-	height: 80px;
 }
 	.quote p{
 		color: #222224;
 		font-family: PT-Sans;
+		padding: 21px 0px 19px 19px;
 		font-size: 2.75em;
-		padding: 21px 120px 19px 19px;
 		width: 100%;
-		height: 100%;
 	}
-	.quote p>span{margin-left: 11px;}
 	.quote a{	/*Visit the Store 按鈕*/
 		display: block;
+		float: right;
 		position: absolute;
-		top: 14px;
+		top: 16px;
 		right: 21px;
 	}
+	.quote a>img{;}
 /*HoverEffect*/
 	.quote a:hover{opacity: 0.8;}
 
@@ -361,32 +360,35 @@ a{text-decoration: none}
 /*-----------Prducts Content-----------*/
 /*-----標題分隔-----*/
 .productTitle{
-	width: 100%;
 	margin-bottom: 24px;
 	position: relative;
+	width: 100%;
 }
 	.productTitle h2{	/*標題*/
 		background: url("../images/background.jpg") repeat;
-		display: inline-block;
-		font-size: 1.5em;
 		font-weight: bold;
+		font-size: 1.5em;
+		display: inline-block;
 		position: relative;
 	}
-	.productTitle h2>span{margin-left: 7px;}
 	.separator{			/*分隔線*/
 		background-image: url(../images/separator.png);
 		background-repeat: repeat-x;
-		position: absolute;
 		margin-top: 5px;
-		width: 1132px;
-		height: 20px;
-	}
-/*	.sponsorTitle{width: 1182px;}*/
-	.productTitle a{	/*商品標題小按鈕*/
-		height: 23px;
-		width: 22px;
 		position: absolute;
-		display: block;
+		top: 0;
+		width: 96%;
+		height: 20px;
+		z-index: -1;
+	}
+	.productTitle h2>span{margin-left: 7px;}
+	
+/*	.sponsorTitle{width: 1182px;}*/
+	.productTitle a{
+		width: 22px;
+		height: 23px;	/*商品標題小按鈕*/
+		/*position: absolute;
+		display: block;*/
 	}
 	.recentPrevButton, .featuredPrevButton, .sponsorPrevButton{	/*商品標題小按鈕*/
 		background-image: url(../images/left_button.png);
@@ -437,20 +439,23 @@ a{text-decoration: none}
 		height: 425px;
 	}
 		.recentProducts .list, .featuredProducts .list{	/*推擠產品清單用*/
-			margin-right: 20px;
+			margin-right: 1.25em;
 		}
 		
 		.onSale{/*On Sale圖片*/
 			position: absolute;
 			top: 11px;
 			left: 14px;
+			max-width: 57px;
+			max-height: 56px;
 			z-index: 1;
 		}
-		.product{/*商品相片*/
+		.product img{/*商品相片*/
 			display: block;
 			float: left;
 			margin-bottom: 10px;
 			position: relative;
+			width: 100%;
 			z-index: 0;
 		}
 		.price{/*價格*/
@@ -458,11 +463,13 @@ a{text-decoration: none}
 			font-size: 1.125em;
 			float: left;
 			margin: 0;
-			padding: 5px 0 20px 15px;
+			margin: 5px 0 20px 15px;
 		}
-		.addToCart{/*購物車按鈕*/
+		.addToCart img{/*購物車按鈕*/
 			float: right;
 			margin: 0 16px 10px 0;
+			max-width: 102px;
+			max-height: 33px;
 		}
 		.recentProducts li>h3,.featuredProducts li>h3{ /*商品標題*/
 			border-top: 1px solid #e7e7e7;
@@ -478,19 +485,16 @@ a{text-decoration: none}
 			clear: both;
 			font-size: 0.875em;
 			line-height: 1.5em;
-			padding: 0 36px 0px 15px;
+			padding: 0 36px 25px 15px;
+			width: 100%;
+			border-bottom: 1px solid #e7e7e7;
 		}
 		.viewTheProduct{ /*View the Product連結*/
-			border-top: 1px solid #e7e7e7;
-			display: block;
-			background: url(../images/viewMore.png) no-repeat center center;
-			color: #95b924;	
-			float: left;
-			position: absolute;
-			bottom: 6px;
-			padding: 16px 0 0 15px;	/*推擠按鈕空間*/
-			width: 100%;
-			height: 51px;
+			background: url(../images/viewMore.png) no-repeat right center;
+			color: #95b924;
+			float: left;	
+			margin: 16px 0 0 15px;	/*推擠按鈕空間*/
+			padding: 0 14px 0 0;	
 		}
 /*HoverEffect*/
 	.product:hover{opacity: 0.8;}
@@ -708,10 +712,50 @@ a{text-decoration: none}
 		margin: 0 auto 40px auto;
 	}
 	.icon{
+		margin-bottom: 40px;
 		width: 100%;
 	}
 		.icon ul{float: left;}
 		.icon .searchBar{float:right;}
+	.nav{
+		display: none;
+	}
+	.buyCartButton{}
 
 	#slideShow_wrap{display: none;}
+	.quote p{
+		font-size: 1.5em;
+		margin: 0 auto;
+		padding: 20px 0;
+		text-align: center;
+		width: 90%;
+	}
+	.quote a{
+		float: none;
+		position: relative;
+		top: 10;
+		right: 0;
+		margin: 0 auto;
+		width: 50%;
+	}
+	.quote a > img{
+		max-width: 60%;
+		height: auto;
+	}
+	
+	.productTitle h2{
+		display: block;
+		max-width: 45%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.separator{width: 100%}
+	.productTitle a{
+		visibility: hidden;
+	}
+	.recentProducts li, .featuredProducts li{
+		margin: 0 0 2em 1.25em !important;
+		width: 45%;
+	}
+	.sponsorVisible, .sponsor{display: none;}
 }	
