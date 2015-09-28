@@ -548,7 +548,6 @@ a{text-decoration: none}
 }
 	#footer h2{
 		font-size: 1.5em;
-		font-weight: normal;
 	}
 	#footer h2>span{margin-left: 8px;}
 
@@ -573,10 +572,14 @@ a{text-decoration: none}
 				margin-bottom: 45px;
 				width: 240px;
 				height: 48px;
+				
 			}
 			.column1 h2{margin-bottom: 19px;}
-			.column1 ul{overflow: auto;}
-			.column1 li{
+			.bottomIcon{
+				display: inline-block;
+				overflow: auto;
+			}
+			.bottomIcon li{
 				float: left;
 				margin-right: 5px;
 			}
@@ -584,7 +587,10 @@ a{text-decoration: none}
 		/*Column2*/
 		.column2{width: 265px;}
 		.column2 h2{margin-bottom: 25px;}
-		.column2 ul{overflow: auto;}
+		.column2 ul{
+			display: inline-block; 
+			overflow: auto;
+		}
 			.column2 li{
 				border: 1px solid #dddddd;
 				-moz-border-radius: 10px;
@@ -592,6 +598,7 @@ a{text-decoration: none}
 				border-radius: 10px;
 				float: left;
 				margin-bottom: 16px;
+				width: 100%;
 				height: 70px;
 			}
 			.column2 li>a{
@@ -600,14 +607,12 @@ a{text-decoration: none}
 				height: 70px;
 			}
 			.column2 li h4{  /*Post Title*/
-				float: left;
 				font-weight: bold;
 				margin-bottom: 10px;
 				padding-top: 15px;
 			}
 			.column2 li p{	/*posted by*/
 				font-size: 0.875em;
-				display: inline-block;
 			}
 			.column2 li>p a{color:#95b924;}
 /*HoverEffect*/
@@ -625,8 +630,11 @@ a{text-decoration: none}
 			}
 
 		/*Column4*/
+		.column4{width: 28%;}
 		.column4 h2{margin-bottom: 19px}
-		.column4 ul{width: 330px;overflow: auto;}
+		.column4 ul{
+			overflow: auto;
+		}
 			.column4 li{
 				float: left;
 				margin-bottom: 22px;
@@ -637,7 +645,6 @@ a{text-decoration: none}
 					font-size: 0.875em;
 					font-weight: bold;
 					margin-right: 16px;
-					text-align: center;
 				}
 				.comment{
 					-moz-border-radius: 10px;
@@ -698,14 +705,16 @@ a{text-decoration: none}
 ------------------------------*/
 @media only screen and (max-width: 568px) and (orientation: landscape){
 	body{
-		border: 1px solid;
+		text-align: center;
 	}
 	#header_wrap,#content_wrap{
 		width: 100%;
 	}
+	#topbar .topbar_inner{width: 100%;}
 	.topbar_inner p{display: none;}
 	.topbar_inner ul{
-		float: left;
+		display: inline-block;
+		float: none;
 	}
 	.logo a{
 		float: none;
@@ -727,7 +736,6 @@ a{text-decoration: none}
 		font-size: 1.5em;
 		margin: 0 auto;
 		padding: 20px 0;
-		text-align: center;
 		width: 90%;
 	}
 	.quote a{
@@ -747,7 +755,6 @@ a{text-decoration: none}
 		display: block;
 		max-width: 45%;
 		margin: 0 auto;
-		text-align: center;
 	}
 	.separator{width: 100%}
 	.productTitle a{
@@ -755,7 +762,30 @@ a{text-decoration: none}
 	}
 	.recentProducts li, .featuredProducts li{
 		margin: 0 0 2em 1.25em !important;
+		text-align: left;
 		width: 45%;
 	}
 	.sponsorVisible, .sponsor{display: none;}
+	
+	#goTop{	/*移至頂端按鈕*/
+		position: fixed;
+		right: 5px;
+		bottom: 0px;
+	}
+	#footer{height: 100%;}
+	.footer_inner{width: 100%;}
+	.column1, .column2, .column3, .column4{width: 100%; margin-bottom: 45px;}
+	a.logo{margin: 0 auto 45px auto;}
+	.column2 ul{
+		text-align: left;
+	}
+	.column4 li{
+		display: inline-block; 
+		float: none;
+	}
+	.comment{text-align: left;}
+
+	#bottombar div{width: 100%}
+	.bottomNav{display: none;}
+	.copyRight{float: none; font-size: 1em;}
 }	
