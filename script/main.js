@@ -24,6 +24,10 @@ $(document).ready(function(){
 					{
 						breakpoint: 569,
 					    settings: "unslick"
+					},
+					{
+						breakpoint: 769,
+					    settings: "unslick"
 					}
 				]
   			});
@@ -38,6 +42,10 @@ $(document).ready(function(){
   				responsive: [
 					{
 						breakpoint: 569,
+					    settings: "unslick"
+					},
+					{
+						breakpoint: 769,
 					    settings: "unslick"
 					}
 				]
