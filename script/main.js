@@ -9,7 +9,30 @@ $(document).ready(function(){
   				slidesToScroll: 1,
   				variableWidth: true,
   				prevArrow: '.prev',
-  				nextArrow: '.next'
+  				nextArrow: '.next',
+  				responsive: [
+  					{
+  						breakpoint: 1025,
+	  					settings:{
+	  						variableWidth: false,
+	  						centerMode: false,
+	  						infinite: true,
+	  						slidesToShow: 1,
+	  						slidesToScroll: 1
+	  					}
+  					},
+  					{
+	  					breakpoint: 769,
+	  					settings:{
+	  						variableWidth: false,
+	  						centerMode: false,
+	  						infinite: true,
+	  						slidesToShow: 1,
+	  						slidesToScroll: 1
+	  					}
+  					}
+  					
+  				]
 			})
 
 			//SlideShow for Recent Products
@@ -21,12 +44,20 @@ $(document).ready(function(){
   				prevArrow: '.recentPrevButton',
   				nextArrow: '.recentNextButton',
   				responsive: [
+  					{
+  						breakpoint: 1025,
+						settings:{
+							variableWidth: false,
+							slidesToShow: 3,
+  							slidesToScroll: 3
+						}
+					},	
 					{
-						breakpoint: 569,
+						breakpoint: 769,
 					    settings: "unslick"
 					},
 					{
-						breakpoint: 769,
+						breakpoint: 569,
 					    settings: "unslick"
 					}
 				]
@@ -40,14 +71,23 @@ $(document).ready(function(){
   				prevArrow: '.featuredPrevButton',
   				nextArrow: '.featuredNextButton',
   				responsive: [
-					{
-						breakpoint: 569,
+  					{
+  						breakpoint: 1025,
+						settings:{
+							variableWidth: false,
+							slidesToShow: 3,
+  							slidesToScroll: 3
+						}
+					},	
+  					{
+						breakpoint: 769,
 					    settings: "unslick"
 					},
 					{
-						breakpoint: 769,
+						breakpoint: 569,
 					    settings: "unslick"
 					}
+					
 				]
   			});
 			
@@ -60,7 +100,18 @@ $(document).ready(function(){
   				slidesToScroll: 1,
   				variableWidth: true,
   				prevArrow: '.sponsorPrevButton',
-  				nextArrow: '.sponsorNextButton'
+  				nextArrow: '.sponsorNextButton',
+  				responsive: [
+  					{
+						breakpoint: 1025,
+						settings:{
+							variableWidth: false,
+							slidesToShow: 4,
+  							slidesToScroll: 1
+						}
+					    	
+					}
+				]
   			});
 
 
