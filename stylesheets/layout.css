@@ -298,8 +298,9 @@ a{text-decoration: none}
 
 		.slideShowText{	/*SlideShow上的文字敘述*/
 			position: absolute;
-			top: 48px;
-			left: 50px;
+			top: 0;
+			left: 0;
+			margin: 48px 0 0 50px;
 			z-index: 10;
 		}
 		.slideShowTitle{	/*SlideShow Title*/
@@ -707,6 +708,10 @@ a{text-decoration: none}
 		Media Queries
 ------------------------------*/
 @media only screen and (max-width: 768px){
+	.topbar_inner p{display: none;}
+	#slideShow_wrap{display: none;}
+	.sponsorVisible, .sponsor{display: none;}
+
 	body{
 		text-align: center;
 	}
@@ -753,19 +758,13 @@ a{text-decoration: none}
 			}
 		.buyCartButton{
 			float: none;
-			display: block;
+			display: inline-block;
 			margin-bottom: 17px;
 		}
-		.buyCartButton img{
-			max-width: 20%;
-		}
-	/*slideShow*/
-	.slide img{max-width: 100%;}
-
 
 	/*content*/
 	.quote p{
-		font-size: 1.5em;
+		font-size: 1.8em;
 		margin: 0 auto;
 		padding: 20px 0;
 		width: 100%;
@@ -774,28 +773,21 @@ a{text-decoration: none}
 		float: none;
 		display: inline-block;
 		margin: 0 auto 10px auto;
-		width: 100%;
 	}
-	.quote a > img{
-		max-width: 25%;
-		height: auto;
-	}
-	
 	.productTitle h2{
 		display: block;
 		max-width: 45%;
 		margin: 0 auto;
 	}
 	.separator{width: 100%}
-	.productTitle a{
-		visibility: hidden;
+	.productTitle>a{
+		display: none !important;
 	}
 	.recentProducts li, .featuredProducts li{
 		margin: 0 0 2em 1.25em !important;
 		text-align: left;
 		width: 45%;
 	}
-	
 	
 	#goTop{	/*移至頂端按鈕*/
 		position: fixed;
@@ -811,7 +803,7 @@ a{text-decoration: none}
 	}
 	.column2 ul{
 		text-align: left;
-		width: 80%;
+		width: 50%;
 	}
 	.column4 ul{
 		margin: 0 auto;
@@ -829,34 +821,6 @@ a{text-decoration: none}
 	.bottomNav{display: none;}
 	.copyRight{float: none; font-size: 1em;}
 }
-@media only screen and (max-width: 768px) and (orientation: portrait){
-	/*topbar*/
-	.topbar_inner p{
-		font-size: 0.875em;
-		margin-right: 1.25em;
-	}
-	.topbar_inner ul{
-		float: right;
-	}
-	/*slideShow*/
-	.slideShowText{
-		position: absolute;
-		top: 20px;
-		left: 10px;
-		text-align: left;
-	}
-	.slideShowTitle{font-size: 2em}
-	.slideShowDescription, .slideShowLink{font-size: 0.875em;}
-	
-	/*content*/
-	.quote p{font-size: 2em;}
-	.sponsorVisible, .sponsor{display: none;}
-	/*footer*/
-	.column2 ul{
-		width: 50%;
-	}
-}
-
 
 @media only screen and (max-width: 568px) and (orientation: portrait){
 	.topbar_inner p{display: none;}
@@ -875,14 +839,10 @@ a{text-decoration: none}
 			display: inline-block;
 			margin-bottom: 20px;
 		}
-	.buyCartButton img{
-			max-width: 40%;
-		}
 	#slideShow_wrap{display: none;}
-	.quote a > img{
-		max-width: 45%;
-	}
+
 	.productTitle h2{max-width: 80%;}
+	
 	.recentProducts li, .featuredProducts li{
 		float: none;
 		display: inline-block;
@@ -906,6 +866,7 @@ a{text-decoration: none}
 @media only screen and (max-width: 568px) and (orientation: landscape){
 	.topbar_inner p{display: none;}
 	#slideShow_wrap{display: none;}
+
 	/*content*/
 	.quote p{
 		width: 90%;
@@ -918,7 +879,7 @@ a{text-decoration: none}
 	.column4 ul{width: 100%;}
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px){
+@media only screen and (min-width: 769px) and (max-width: 1210px){
 	body{
 		text-align: center;
 	}
@@ -927,14 +888,13 @@ a{text-decoration: none}
 
 	/*slideShow*/
 	.slideShowText{
-		position: absolute;
-		top: 20px;
-		left: 10px;
+		margin: 24px 0 0 25px;
 		text-align: left;
 	}
 	.slideShowTitle{font-size: 2.5em}
 	.slideShowDescription, .slideShowLink{font-size: 0.875em;}
-	
+		.slide img{max-width: 100%;}
+
 	/*content*/
 	.quote p{font-size: 2em;}
 	.quote a{margin-top: 10px}
@@ -973,3 +933,12 @@ a{text-decoration: none}
 	.bottomNav li,.copyRight{font-size: 1em;}
 }
 
+
+/*Retina更換圖片用*/
+/*
+@media screen and (-webkit-min-device-pixel-ratio: 2),screen and (min--moz-device-pixel-ratio: 2){
+    .logo a{
+    	background: url(../images/logo-2x.png);
+		background-size: 634px 118px;
+    }
+}*/
