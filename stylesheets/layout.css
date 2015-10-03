@@ -340,11 +340,11 @@ a{text-decoration: none}
 }
 	.quote p{
 		color: #222224;
-		font-family: PT-Sans;
 		display: inline-block;
-		padding: 21px 0px 19px 19px;
+		font-family: PT-Sans;
 		font-size: 2.75em;
-		width: 80%;
+		padding: 21px 0px 19px 0.4318em;
+		width: 80%;	
 	}
 	.quote a{	/*Visit the Store 按鈕*/
 		float: right;
@@ -524,6 +524,7 @@ a{text-decoration: none}
 		.sponsor img{
 			display: block;
 			margin: 0 auto 0 auto;
+			max-width: 100%;
 		}
 /*HoverEffect*/
 .sponsor a:hover{opacity: 0.5;}
@@ -891,13 +892,16 @@ a{text-decoration: none}
 		margin: 24px 0 0 25px;
 		text-align: left;
 	}
-	.slideShowTitle{font-size: 2.5em}
+	.slideShowTitle{font-size: 2.5em;}
 	.slideShowDescription, .slideShowLink{font-size: 0.875em;}
 		.slide img{max-width: 100%;}
 
 	/*content*/
-	.quote p{font-size: 2em;}
-	.quote a{margin-top: 10px}
+	.quote a{
+		float: none;
+		display: inline-block;
+		margin-bottom: 16px;
+	}
 
 	.recentProducts li, .featuredProducts li{
 		margin: 0 1.25em 2em 1.25em !important;
