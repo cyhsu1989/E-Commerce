@@ -4,6 +4,6 @@
 http://cyhsu9856.github.io/web_practice2
 
 使用技術:
-  - css3
+  - CSS3
   - jQuery plug-in
   - Responsive Web Design (without Frameworks)
