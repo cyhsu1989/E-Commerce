@@ -1,7 +1,7 @@
 # web_practice2
 
-網頁排版練習_電子商務型網站: 
-http://cyhsu9856.github.io/web_practice2
+網頁排版_電子商務型網站: 
+http://cyhsu9856.github.io/E-Commerce
 
 使用技術:
   - CSS3
